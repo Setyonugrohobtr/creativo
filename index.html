@@ -1,79 +1,161 @@
 <!doctype html>
-<html>
-  <head>
-    <!-- Page setup -->
-    <meta charset="utf-8">
-    <title>Creativo Enterprise</title>
-    <meta name="description" content="A brief description of your site for search engines">
-    <meta name="author" content="Information about the author here">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-    <link rel="icon" type="image/png" href="favicon.png">
-  
-    <!-- Stylesheets -->
-    <!-- Reset default styles and add support for google fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
-    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-   
-    <!-- Custom styles -->
-    <link href="style.css" rel="stylesheet" type="text/css" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
+        .container {
+            text-align: center;
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            margin: 10px;
+        }
 
-    <!-- Want to add Bootstrap? -->
-    <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
-    
-  </head>
-  
-  <body>
+        .logo img {
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 40px;
+        }
 
-    <header id="header">
-      <img src="logo.jpg">
-      <h1>Simple Website</h1>
-      
-      <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
-      <ul class="main-menu">
-        <li><a href="#home">home</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#contact">contact</a></li>
-      </ul>                 
-    </header>
-   
-    <div id="container">
-      <div class="inner">
-        <div id="content"> 
-          
-          <div id="home" class="content-region hide">
-            <h2>Home</h2>
-            <p>
-              This is a simple website template published with Github Pages. <a href="https://github.com/cpl-makerlab/simple-website-template">Fork this repository</a> to create your own site!
-            </p>
-          </div>
-          
-          <div id="about" class="content-region hide">
-            <h2>About</h2>
-            <p>
-              Sed tempus urna et pharetra pharetra massa massa ultricies. Porttitor rhoncus dolor purus non enim praesent. Id aliquet risus feugiat in ante metus dictum. 
-            </p>
-          </div>
-          
-          <div id="contact" class="content-region hide">
-            <h2>Contact</h2>
-            <p>
-              Pellentesque nec nam aliquam sem et tortor consequat. Quisque sagittis purus sit amet volutpat consequat. Magna eget est lorem ipsum dolor. 
-            </p>
-          </div>
-          
+        .biolink-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .biolink-btn {
+            background-color: #ff5722;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .biolink-btn:hover {
+            opacity: 0.8;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .tab {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            flex: 1;
+            text-align: center;
+            margin: 0 5px;
+        }
+
+        .tab:hover, .tab.active {
+            background-color: #555;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            .biolink-btn {
+                padding: 10px 15px;
+            }
+
+            .tab {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo di samping atas -->
+        <div class="logo">
+            <img src="https://assets.nicepagecdn.com/dfeaf26a/4704158/images/NGRCTOALL.png" alt="Logo" />
         </div>
-      </div>
+
+        <!-- Tombol biolink -->
+        <div class="biolink-buttons">
+            <button class="biolink-btn">Link 1</button>
+            <button class="biolink-btn">Link 2</button>
+            <button class="biolink-btn">Link 3</button>
+        </div>
+
+        <!-- Tab Navigasi -->
+        <div class="tabs">
+            <div class="tab active" onclick="openTab(event, 'tab1')">Tab 1</div>
+            <div class="tab" onclick="openTab(event, 'tab2')">Tab 2</div>
+            <div class="tab" onclick="openTab(event, 'tab3')">Tab 3</div>
+        </div>
+
+        <!-- Konten Tab -->
+        <div id="tab1" class="tab-content active">
+            <h2>The Corporate</h2>
+            <!-- Konten di sini -->
+        </div>
+
+        <div id="tab2" class="tab-content">
+            <h2>Blog Posts</h2>
+            <div id="blog-posts"></div>
+        </div>
+
+        <div id="tab3" class="tab-content">
+            <h2>Halaman 3</h2>
+            <!-- Konten di sini -->
+        </div>
     </div>
 
-    <footer>  
-      Footer region
-    </footer>
-    
-    <!-- Load additional JS scripts here -->
-    <script type="text/javascript" src="script.js"></script>
-    
-  </body>
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feedek@0.1.2/jquery.feedek.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#blog-posts').FeedEk({
+                FeedUrl: 'https://setyonugroho.com/feeds/posts/default',
+                MaxCount: 5,
+                ShowDesc: true,
+                ShowPubDate: true,
+                Title: 'Latest Blog Posts',
+                DescCharacterLimit: 100
+            });
+        });
+
+        function openTab(event, tabId) {
+            $('.tab-content').removeClass('active');
+            $('#' + tabId).addClass('active');
+            $('.tab').removeClass('active');
+            $(event.currentTarget).addClass('active');
+        }
+    </script>
+</body>
 </html>
