@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,24 +12,57 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            height: 100vh;
         }
 
         .container {
             text-align: center;
-            background-color: black;
+            background-color: Black;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 600px;
-            margin: 10px;
         }
 
         .logo img {
-            width: 100%;
-            max-width: 400px;
+            width: 400px;
             margin-bottom: 40px;
+        }
+
+        .counter {
+            background-color: #ffeb3b;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .social-btn {
+            background-color: #3b5998;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .social-btn.twitter {
+            background-color: #1da1f2;
+        }
+
+        .social-btn.instagram {
+            background-color: #e1306c;
+        }
+
+        .social-btn:hover {
+            opacity: 0.8;
         }
 
         .biolink-buttons {
@@ -47,62 +80,38 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
-            width: 100%;
-            max-width: 300px;
         }
 
         .biolink-btn:hover {
             opacity: 0.8;
         }
 
-        .tabs {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px 0;
+        .animated-image img {
+            width: 100px;
+            margin-top: 20px;
+            animation: bounce 2s infinite;
         }
 
-        .tab {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            flex: 1;
-            text-align: center;
-            margin: 0 5px;
-        }
-
-        .tab:hover, .tab.active {
-            background-color: #555;
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        @media (max-width: 600px) {
-            .biolink-btn {
-                padding: 10px 15px;
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
             }
-
-            .tab {
-                padding: 10px;
-                font-size: 14px;
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
             }
         }
     </style>
-</head>
-<body>
+
+
     <div class="container">
         <!-- Logo di samping atas -->
         <div class="logo">
             <img src="https://assets.nicepagecdn.com/dfeaf26a/4704158/images/NGRCTOALL.png" alt="Logo" />
         </div>
+
 
         <!-- Tombol biolink -->
         <div class="biolink-buttons">
@@ -110,52 +119,299 @@
             <button class="biolink-btn">Link 2</button>
             <button class="biolink-btn">Link 3</button>
         </div>
+        
+        <div color="white">Split</div>
 
-        <!-- Tab Navigasi -->
-        <div class="tabs">
+<div class="tabs">
             <div class="tab active" onclick="openTab(event, 'tab1')">Tab 1</div>
             <div class="tab" onclick="openTab(event, 'tab2')">Tab 2</div>
             <div class="tab" onclick="openTab(event, 'tab3')">Tab 3</div>
         </div>
 
-        <!-- Konten Tab -->
-        <div id="tab1" class="tab-content active">
-            <h2>The Corporate</h2>
-            <!-- Konten di sini -->
-        </div>
-
+       <div id="tab1" class="tab-content">
+    <h2>The Corporate</h2>
+    <p>
+        Creativo Enterprise (Creativo Gunadaya Bangsa Nugroho Enterprise) adalah merek layanan bisnis yang melayani kebutuhan digital (desain), percetakan, merchandise, pengembangan laman web dan aplikasi telepon genggam serta Jaringan Hiburan yang mencakup produksi dan distribusi konten "Seth Cardona" Setyo Nugroho berupa audio dan visual, didirikan sejak 2 Maret 2016, Ngr berkomitmen memberikan kepuasan untuk pelanggan dengan budaya dan ciri khas budaya kerja Ngr (anti-mainstream).
+    </p>
+    
+    <h3>WHO WE ARE</h3>
+    <h4>Company Overview</h4>
+    <p>
+        Creativo Enterprise (Creativo Gunadaya Bangsa Nugroho Enterprise) adalah merek dan layanan bisnis terintegrasi yang melayani kebutuhan digital desain, percetakan, merchandise, pengembangan laman web dan aplikasi telepon genggam serta Jaringan Hiburan yang mencakup produksi dan distribusi konten "Seth Cardona" Setyo Nugroho berupa audio dan visual, didirikan sejak 2 Maret 2016, Ngr berkomitmen memberikan kepuasan untuk pelanggan dengan budaya dan ciri khas budaya kerja Ngr (anti-mainstream).
+    </p>
+    
+    <h4>Leadership</h4>
+    <p><strong>Setyo Nugroho</strong><br />
+    Chief Executive Officer</p>
+    <p>
+        Setyo Nugroho, lebih dikenal sebagai Setyo Nugroho Ngr (lahir 11 Mei) adalah Pendiri Creativo Gunadaya Bangsa Nugroho Enterprise atau Ngr. Setyo mendirikan 2 Maret 2016 dengan pendahulu BBPICH di 2013 dan dilanjutkan penerus SNBTR 2016 hingga sekarang menjadi Ngr.
+    </p>
+    <p><strong>Sectio Kautsar Ramadhani</strong><br />
+    Chief Operating Officer & Chief Brand Officer</p>
+    <p>
+        Sectio Kautsar Ramadhani Co-Founder XAVIERA Studios, yang dikenal sebagai revolusioner desain dan multitalenta bakat grafis.
+    </p>
+    
+    <h3>WHAT WE DO</h3>
+    <h4>Consumer Products</h4>
+    <p>
+        Ngr Design berkomitmen memproduksi barang digital berupa desain yang diproduksi langsung oleh Ngr Design, desain yang dihasilkan dapat berupa desain digital/poster digital atau berupa desain untuk komersial (fisik/non-fisik).
+    </p>
+    
+    <h4>Finansial</h4>
+    <p>
+        Creativo Investment (Penanaman Modal Creativo, Penanaman Modal Proyek Eksperimental, Kemitraan Termasuk Kemitraan Percetakan Khusus Eks-Karesidenan Banyumas)
+    </p>
+    
+    <h4>Production</h4>
+    <p>
+        Creativo Studios merupakan rumah produksi (Video, Foto, Ngr Music) dari seluruh konten Setyo Nugroho Ngr diseluruh platform media sosial seperti; YouTube, Facebook, Instagram, Spotify. Selain dapat diakses dimasing-masing platform, seluruh konten bisa diakses menjadi satu di Laman Web Ngr Network sendiri. Creativo Studios tidak memproduksi kontennya untuk sendiri, Ngr Network Entertaiment tidak mempublikasikan kontennya didalam akun sendiri, tetapi memproduksi keseluruhan untuk platform milik "Seth Cardona" Setyo Nugroho yang selanjutnya dipanggil sebagai Ngr Network. Jasa & Editing Video, Foto, Jasa Pembuatan Website-Apps, Produksi Konten Setyo Nugroho Ngr Disemua Platform.
+    </p>
+    
+    <h4>Streaming Media & Libraries Content</h4>
+    <p>
+        Ngr Network adalah platform digital (Video, Ngr Music, Foto) berisikan seluruh konten Free-To Watch Podcast termasuk SockDash! PodCast LIVE, konten Pay Per View termasuk LVLUP dan berbagai konten yang tersedia di perpustakaan digital bisa disaksikan kapanpun dimanapun lebih di 180 Negara dengan 2 Bahasa (Indonesia dan Inggris). Manajemen Kekayaan Intelektual, Perpustakaan Konten Setyo Nugroho Ngr dan Mitra/Mantan Mitra incl. AREABRO Films, Pay Per View Content. Ngr Network memproduksi keseluruhan konten yang dipublikasikan di seluruh platform media sosial "Seth Cardona" Setyo Nugroho. Ngr Network tersedia di Desktop & Mobile Laman Website selengkapnya dapat diakses melalui https://network.setyonugroho.me/. Ngr Network tersedia di berbagai platform media sosial sebagai @SetyoNugrohoNgr
+    </p>
+    <p>
+        <strong>180</strong><br />
+        Jangkauan Negara: Layanan hiburan Ngr Network/seluruh platoform "Seth Cardona" Setyo Nugroho dapat diakses lebih dari 180 Negara dengan 2 Bahasa.
+    </p>
+    <p>
+        <strong>73346+</strong><br />
+        Jumlah Tayangan: Jumlah tayangan Ngr Network di seluruh platform yaitu Laman Ngr Network, YouTube, Instagram, Twitter, Pinterest. Dan juga termasuk "dead media" seperti Vidio.com MeTube.
+    </p>
+    <p>
+        <strong>4000+</strong><br />
+        Langganan: Ngr berkomitmen memberikan hiburan dengan gaya konten tersendiri yang dapat disaksikan serta dapat berlangganan baik secara gratis maupun berbayar bersama lebih dari 4000 pelanggan lintas platform.
+    </p>
+    <p>
+        <strong>260+</strong><br />
+        Konten video dan foto di Perpustakaan Konten: Berbagai konten yang disajikan dalam berbagai format baik secara grafis diam (foto), video dan NGRMusic sebagai penyedia audio.
+    </p>
+    
+    <h3>LICENSE</h3>
+    <h4>Licencing</h4>
+    <p>
+        Creativo Enterprise menaungi seluruh produk atau layanan Creativo Enterprise baik Ngr Desain, CREATIVO Studios, CREATIVO Finansial, Ngr Network. Seluruh tanggung jawab produk atau layanan berada dibawah naungan Creativo Enterprise.
+    </p>
+    <p>
+        LICENCING - Our worldwide licensing program builds partnerships with companies around the globe to create products featuring our marks and logos, copyrighted works and characters in diverse categories, including apparel, collectibles, digital goods, books and more. ​Creativo Enterprise & Ngr licensed products, created by our more than 2 licenses in more than 100 countries worldwide, are available at all Creativo Enterprise Shop/Merchandise. ​Creativo Enterprise is a IDR 10 Million global brand at retail annually.
+    </p>
+    <p>
+        Creativo Enterprise releases music worldwide on digital stores and streaming platforms such as YouTube have resulted in both flagship playlists and curated material, which have engaged fans across different media channels in a new way.
+    </p>
+    <p>
+        Our direct-to-consumer merchandise operation, which consists of our global network of Ngr Network Shop e-commerce sites and venue merchandising business, designs, sources, markets and distributes numerous Ngr-branded products, such as apparel, accessories and many other novelty items.
+    </p>
+    <p>
+        Indonesian Languange Notice :
+    </p>
+    <ul>
+        <li><strong>Major Licenses (Lisensi Utama):</strong> Creativo Enterprise memiliki hak penuh atas lisensi di wilayah Indonesia. Kategori yang dilisensikan mencakup konten dan merchandise, termasuk video dan audio yang diproduksi oleh child corporate atau mitra ​Creativo Enterprise. Semua klip konten dinyatakan sah secara hukum intelektual.</li>
+        <li><strong>Konten Video:</strong> Ngr Network: Termasuk dalam program major license, diizinkan untuk digunakan di Indonesia.</li>
+        <li><strong>Konten Ngr Classic On Ngr Network:</strong> Bagian dari program major license, dapat digunakan secara legal.</li>
+        <li><strong>Hak Merek/Produk:</strong> Creativo Enterprise berhak memberikan merek atau produk yang diciptakan kepada organisasi atau kelompok tertentu dengan kesepakatan khusus. Creativo Enterprise dapat mencabut hak tersebut secara sepihak jika terjadi pelanggaran pada perjanjian hak cipta konten.</li>
+        <li><strong>Konten Audio:</strong> Tersedia melalui YouTube Podcast dan Spotify dengan hak cipta major license.</li>
+    </ul>
+    
+    <h3>Copyright's Section</h3>
+    <ul>
+        <li>Creativo Enterprise/Creativo Gunadaya Bangsa Nugroho Enterprise : (Digital Registered)</li>
+        <li>SockDash Podcast : (Registered)</li>
+        <li>SETYO NUGROHO : (registered) SETYO NUGROHO trademark registration is intended to name of people; cover the categories of entertainment services, namely, a show and people about podcast and gaming; entertainment services, namely, the production and exhibition of entertainment podcast & gaming events rendered through broadcast media including private streaming media and distributed via various platforms across multiple forms of social media; providing podcast and information through broadcast media including private streaming media and distributed via various platforms across multiple forms of social media; providing information in the fields of entertainment through broadcast media including streaming media and distributed via various platforms across multiple forms of transmission media; providing a website in the field of entertainment information.</li>
+        <li>Ngr / Nugroho Bussiness / Ngr Nugroho Bussines / Ngr Biz : (registered mark) (registered trademark) (digital registered)</li>
+        <li>All Elite Design / AED: (Expired-Abandoned due Problems with other company)</li>
+        <li>SockDash : (Expired-Under Renewing)</li>
+        <li>Seth Cardona : (Registered) reference and rebrand section to "SETYO NUGROHO"</li>
+        <li>Cassava Elite Meals & Beverages / CE: (Registered)</li>
+        <li>FastNitro : (Registered) (Digital Registered) (Inactive Use)</li>
+        <li>FN Shop : (Abandoned)</li>
+        <li>Ngr Network : (Registered) (Streaming Media Internally Licensed) (Google License)</li>
+        <li>Setyo "The Seth" Nugroho : (unregistered)</li>
+        <li>SockDash Podcast LIVE : (Registered)</li>
+    </ul>
+    
+    <h3>JOB</h3>
+    <p>
+        Mulai karir anda di ​Creativo Enterprise sekarang! Untuk bergabung ke ​Creativo Enterprise anda dapat mengirimkan lampiran/CV, pekerjaan yang masih dibutuhkan:
+    </p>
+    <ul>
+        <li>CCO - Chief Content Officer (Executive)</li>
+        <li>UI/UX Designer, Commercial Designer & Web Development (Jobber)</li>
+    </ul>
+    <p>
+        Creativo Enterprise Partner's proposal or Child Corporate's 
+        Untuk menjadi anggota dengan berbagai benefit (peningkatan pesanan) sebagai warehouse khusus percetakan bisa dikirimkan melalui email dibawah atau anda ingin menjadi anak perusahaan (merger) dengan ​Creativo Enterprise bisa apply dibawah.
+    </p>
+</div>
         <div id="tab2" class="tab-content">
-            <h2>Blog Posts</h2>
-            <div id="blog-posts"></div>
+    <h2>Blog Posts</h2>
+    <div id="blog-posts">
+        <!-- Postingan Blogger akan dimuat di sini -->
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/feedek@0.1.2/jquery.feedek.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#blog-posts').FeedEk({
+            // Gantilah dengan URL RSS Feed Blogger Anda
+            FeedUrl: 'https://setyonugroho.com/feeds/posts/default',
+            MaxCount: 5, // Jumlah postingan yang ditampilkan
+            ShowDesc: true, // Tampilkan deskripsi postingan
+            ShowPubDate: true, // Tampilkan tanggal publikasi
+            Title: 'Latest Blog Posts', // Judul feed
+            DescCharacterLimit: 100 // Batas karakter deskripsi
+        });
+    });
+</script>
+
+      <div id="tab3" class="tab-content" style="max-height: 500px; overflow-y: auto;">
+    <h2>Halaman 3</h2>
+    <p>Ini adalah konten untuk halaman 3.</p>
+    
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+        <!-- Embed YouTube Video 1 -->
+        <div style="width: 48%; margin-bottom: 20px;">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+            <p><em>Episode 1</em></p>
+            <h3><strong>Judul Video 1</strong></h3>
         </div>
 
-        <div id="tab3" class="tab-content">
-            <h2>Halaman 3</h2>
-            <!-- Konten di sini -->
+        <!-- Embed YouTube Video 2 -->
+        <div style="width: 48%; margin-bottom: 20px;">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+            <p><em>Episode 2</em></p>
+            <h3><strong>Judul Video 2</strong></h3>
+        </div>
+
+        <!-- Embed YouTube Video 3 -->
+        <div style="width: 48%; margin-bottom: 20px;">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
+            <p><em>Episode 3</em></p>
+            <h3><strong>Judul Video 3</strong></h3>
+        </div>
+
+        <!-- Embed YouTube Video 4 -->
+        <div style="width: 48%; margin-bottom: 20px;">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0" allowfullscreen></iframe>
+            <p><em>Episode 4</em></p>
+            <h3><strong>Judul Video 4</strong></h3>
+        </div>
+
+        <!-- Embed YouTube Video 5 -->
+        <div style="width: 48%; margin-bottom: 20px;">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_5" frameborder="0" allowfullscreen></iframe>
+            <p><em>Episode 5</em></p>
+            <h3><strong>Judul Video 5</strong></h3>
+        </div>
+
+        <!-- Embed YouTube Video 6 -->
+        <div style="width: 48%; margin-bottom: 20px;">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_6" frameborder="0" allowfullscreen></iframe>
+            <p><em>Episode 6</em></p>
+            <h3><strong>Judul Video 6</strong></h3>
+        </div>
+
+        <!-- Embed YouTube Video 7 -->
+        <div style="width: 48%; margin-bottom: 20px;">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_7" frameborder="0" allowfullscreen></iframe>
+            <p><em>Episode 7</em></p>
+            <h3><strong>Judul Video 7</strong></h3>
+        </div>
+
+        <!-- Embed YouTube Video 8 -->
+        <div style="width: 48%; margin-bottom: 20px;">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_8" frameborder="0" allowfullscreen></iframe>
+            <p><em>Episode 8</em></p>
+            <h3><strong>Judul Video 8</strong></h3>
+        </div>
+
+        <!-- Embed YouTube Video 9 -->
+        <div style="width: 48%; margin-bottom: 20px;">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_9" frameborder="0" allowfullscreen></iframe>
+            <p><em>Episode 9</em></p>
+            <h3><strong>Judul Video 9</strong></h3>
+        </div>
+
+        <!-- Embed YouTube Video 10 -->
+        <div style="width: 48%; margin-bottom: 20px;">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_10" frameborder="0" allowfullscreen></iframe>
+            <p><em>Episode 10</em></p>
+            <h3><strong>Judul Video 10</strong></h3>
+        </div>
+
+        <!-- Embed YouTube Video 11 -->
+        <div style="width: 48%; margin-bottom: 20px;">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_11" frameborder="0" allowfullscreen></iframe>
+            <p><em>Episode 11</em></p>
+            <h3><strong>Judul Video 11</strong></h3>
+        </div>
+
+        <!-- Embed YouTube Video 12 -->
+        <div style="width: 48%; margin-bottom: 20px;">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_12" frameborder="0" allowfullscreen></iframe>
+            <p><em>Episode 12</em></p>
+            <h3><strong>Judul Video 12</strong></h3>
         </div>
     </div>
+</div>
 
-    <!-- Script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feedek@0.1.2/jquery.feedek.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#blog-posts').FeedEk({
-                FeedUrl: 'https://setyonugroho.com/feeds/posts/default',
-                MaxCount: 5,
-                ShowDesc: true,
-                ShowPubDate: true,
-                Title: 'Latest Blog Posts',
-                DescCharacterLimit: 100
-            });
-        });
 
-        function openTab(event, tabId) {
-            $('.tab-content').removeClass('active');
-            $('#' + tabId).addClass('active');
-            $('.tab').removeClass('active');
-            $(event.currentTarget).addClass('active');
+
+    </div>
+
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-    </script>
-</body>
-</html>
+
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .tab.active {
+            background-color: #ff5722;
+            color: #ffffff;
+        }
+
+        .tab-content {
+            display: none;
+            color: white;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            .tab {
+                padding: 8px 16px;
+            }
+        }
+    </style>
+
+
+
+<script src="script.js"></script>
+
+</!doctype>
